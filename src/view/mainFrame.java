@@ -54,6 +54,8 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         ujTag = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jSeparator6 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,9 +182,9 @@ public class mainFrame extends javax.swing.JFrame {
                     .addContainerGap(234, Short.MAX_VALUE)))
         );
 
-        container.setBackground(new java.awt.Color(51, 255, 204));
+        container.setBackground(new java.awt.Color(42, 43, 45));
 
-        elvallalt.setBackground(new java.awt.Color(51, 0, 51));
+        elvallalt.setBackground(new java.awt.Color(42, 43, 45));
         elvallalt.setForeground(new java.awt.Color(0, 51, 51));
 
         jLabel6.setBackground(new java.awt.Color(217, 81, 78));
@@ -206,7 +208,7 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        felveheto.setBackground(new java.awt.Color(0, 51, 51));
+        felveheto.setBackground(new java.awt.Color(42, 43, 45));
         felveheto.setRequestFocusEnabled(false);
 
         jLabel9.setForeground(new java.awt.Color(0, 255, 255));
@@ -229,8 +231,10 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(597, Short.MAX_VALUE))
         );
 
+        szabadsag.setBackground(new java.awt.Color(42, 43, 45));
         szabadsag.setPreferredSize(new java.awt.Dimension(1298, 720));
 
+        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("Szabadsag");
 
         javax.swing.GroupLayout szabadsagLayout = new javax.swing.GroupLayout(szabadsag);
@@ -250,8 +254,9 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(504, Short.MAX_VALUE))
         );
 
-        kerelmek.setBackground(new java.awt.Color(0, 255, 255));
+        kerelmek.setBackground(new java.awt.Color(42, 43, 45));
 
+        jLabel7.setForeground(new java.awt.Color(255, 51, 51));
         jLabel7.setText("KERELMEK");
 
         javax.swing.GroupLayout kerelmekLayout = new javax.swing.GroupLayout(kerelmek);
@@ -271,25 +276,45 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(569, Short.MAX_VALUE))
         );
 
-        ujTag.setBackground(new java.awt.Color(255, 0, 255));
+        ujTag.setBackground(new java.awt.Color(42, 43, 45));
 
-        jLabel10.setText("Új TAG");
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel10.setText("Ha fel szeretne venni egy új tagot a rendszerbe, adja meg az adatait! ");
+
+        jTextField1.setText("jTextField1");
+
+        jSeparator6.setBackground(new java.awt.Color(217, 81, 78));
+        jSeparator6.setForeground(new java.awt.Color(217, 81, 78));
 
         javax.swing.GroupLayout ujTagLayout = new javax.swing.GroupLayout(ujTag);
         ujTag.setLayout(ujTagLayout);
         ujTagLayout.setHorizontalGroup(
             ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ujTagLayout.createSequentialGroup()
-                .addGap(420, 420, 420)
-                .addComponent(jLabel10)
-                .addContainerGap(1047, Short.MAX_VALUE))
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ujTagLayout.createSequentialGroup()
+                        .addGap(729, 729, 729)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ujTagLayout.createSequentialGroup()
+                        .addGap(454, 454, 454)
+                        .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addGroup(ujTagLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(495, Short.MAX_VALUE))
         );
         ujTagLayout.setVerticalGroup(
             ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ujTagLayout.createSequentialGroup()
-                .addContainerGap(545, Short.MAX_VALUE)
+            .addGroup(ujTagLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addComponent(jLabel10)
-                .addGap(251, 251, 251))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(629, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
@@ -298,7 +323,7 @@ public class mainFrame extends javax.swing.JFrame {
             containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(elvallalt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(felveheto, javax.swing.GroupLayout.DEFAULT_SIZE, 1510, Short.MAX_VALUE))
+                .addComponent(felveheto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerLayout.createSequentialGroup()
                     .addContainerGap()
@@ -317,7 +342,7 @@ public class mainFrame extends javax.swing.JFrame {
             containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(elvallalt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(felveheto, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE))
+                .addComponent(felveheto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(szabadsag, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE))
             .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,6 +461,8 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel kerelmek;
     private javax.swing.JLabel kerelmekLabel;
     private javax.swing.JPanel szabadsag;
