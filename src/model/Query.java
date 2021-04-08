@@ -33,12 +33,13 @@ public class Query {
 
     }
 
-    public void addUser(String nev, String beosztas, int varosId, int fizetes, int szabadsag) {
+    public void addUser(String nev, String beosztas, String jelszo, int varosId, int fizetes, int szabadsag) {
         try {
-            String sql = "insert into dolgozo values (?,?,?,?,?)";
+            String sql = "insert into dolgozo values (?,?,?,?,?,?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, nev);
             preparedStatement.setString(2, beosztas);
+            preparedStatement.setString(3, jelszo);
             preparedStatement.setInt(3, varosId);
             preparedStatement.setInt(4, fizetes);
             preparedStatement.setInt(5, szabadsag);
