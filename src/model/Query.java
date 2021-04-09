@@ -45,6 +45,7 @@ public class Query {
             ResultSet rs = dbmd.getTables(null, "APP", "DOLGOZO", null);
             if (!rs.next()) {
                 createStatement.execute("CREATE TABLE dolgozo (id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, nev varchar(30) NOT NULL, email varchar(100) UNIQUE NOT NULL, beosztas int NOT NULL, varos varchar(50) NOT NULL, fizetes int NOT NULL, szabadsag int NOT NULL, jelszo varchar(50)  NOT NULL )");
+               // createStatement.execute("CREATE TABLE feladatok (id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, feladatnev varchar(30) NOT NULL, leiras varchar(200)  NOT NULL, kiadata int NOT NULL, megkapta int , kategoriaId int  NOT NULL )");
             }
 
         } catch (SQLException ex) {
