@@ -33,7 +33,7 @@ public class mainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         chooserPanel = new javax.swing.JPanel();
-        ujTagLabel = new javax.swing.JLabel();
+        munkaLabel = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         elvallaltLabel = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -43,6 +43,8 @@ public class mainFrame extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         kerelmekLabel = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
+        ujTagLabel = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
         container = new javax.swing.JPanel();
         elvallalt = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -79,17 +81,32 @@ public class mainFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        munka = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jTextField9 = new javax.swing.JTextField();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jLabel27 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         chooserPanel.setBackground(new java.awt.Color(217, 81, 78));
         chooserPanel.setForeground(new java.awt.Color(217, 81, 78));
 
-        ujTagLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        ujTagLabel.setText("                            Új tag felvétele");
-        ujTagLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+        munkaLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        munkaLabel.setText("                        Munka hozzáadása");
+        munkaLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ujTagLabelMouseClicked(evt);
+                munkaLabelMouseClicked(evt);
             }
         });
 
@@ -125,6 +142,14 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        ujTagLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ujTagLabel.setText("                            Új tag felvétele");
+        ujTagLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ujTagLabelMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout chooserPanelLayout = new javax.swing.GroupLayout(chooserPanel);
         chooserPanel.setLayout(chooserPanelLayout);
         chooserPanelLayout.setHorizontalGroup(
@@ -133,7 +158,7 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chooserPanelLayout.createSequentialGroup()
-                        .addComponent(ujTagLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(munkaLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chooserPanelLayout.createSequentialGroup()
                         .addGap(0, 26, Short.MAX_VALUE)
@@ -154,6 +179,10 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(25, 25, 25))))
                     .addComponent(kerelmekLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(chooserPanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(chooserPanelLayout.createSequentialGroup()
                     .addContainerGap()
@@ -169,6 +198,11 @@ public class mainFrame extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(szabadsagLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .addGroup(chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(chooserPanelLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ujTagLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         chooserPanelLayout.setVerticalGroup(
             chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,11 +217,13 @@ public class mainFrame extends javax.swing.JFrame {
                 .addComponent(kerelmekLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ujTagLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(65, 65, 65)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 439, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(munkaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 352, Short.MAX_VALUE))
             .addGroup(chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(chooserPanelLayout.createSequentialGroup()
                     .addGap(26, 26, 26)
@@ -203,6 +239,11 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGap(191, 191, 191)
                     .addComponent(szabadsagLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(234, Short.MAX_VALUE)))
+            .addGroup(chooserPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(chooserPanelLayout.createSequentialGroup()
+                    .addGap(341, 341, 341)
+                    .addComponent(ujTagLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(445, Short.MAX_VALUE)))
         );
 
         container.setBackground(new java.awt.Color(42, 43, 45));
@@ -419,6 +460,10 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(217, 81, 78));
         jLabel16.setText("Az adatokat késõbb még modosíthatja");
 
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel28.setText("Email-cím:");
+
         javax.swing.GroupLayout ujTagLayout = new javax.swing.GroupLayout(ujTag);
         ujTag.setLayout(ujTagLayout);
         ujTagLayout.setHorizontalGroup(
@@ -426,7 +471,7 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(ujTagLayout.createSequentialGroup()
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ujTagLayout.createSequentialGroup()
-                        .addGap(454, 454, 454)
+                        .addGap(464, 464, 464)
                         .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addGroup(ujTagLayout.createSequentialGroup()
@@ -438,7 +483,7 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addGap(108, 108, 108)
                                 .addComponent(jLabel16))))
                     .addGroup(ujTagLayout.createSequentialGroup()
-                        .addGap(550, 550, 550)
+                        .addGap(559, 559, 559)
                         .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ujTagLayout.createSequentialGroup()
@@ -450,26 +495,29 @@ public class mainFrame extends javax.swing.JFrame {
                                     .addGroup(ujTagLayout.createSequentialGroup()
                                         .addGap(8, 8, 8)
                                         .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13)
-                                            .addComponent(jLabel14)
-                                            .addComponent(jLabel15))))
+                                            .addComponent(jLabel15)
+                                            .addComponent(jLabel28)
+                                            .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel14)
+                                                .addComponent(jLabel13)))))
                                 .addGap(76, 76, 76)
                                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(495, Short.MAX_VALUE))
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(485, Short.MAX_VALUE))
         );
         ujTagLayout.setVerticalGroup(
             ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ujTagLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ujTagLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132)
+                .addGap(94, 94, 94)
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -477,11 +525,11 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(35, 35, 35)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(32, 32, 32)
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -489,13 +537,124 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
+                .addGap(44, 44, 44)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16)
                 .addGap(56, 56, 56))
+        );
+
+        munka.setBackground(new java.awt.Color(42, 43, 45));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel23.setText("Határidõ:");
+
+        jSeparator11.setBackground(new java.awt.Color(217, 81, 78));
+        jSeparator11.setForeground(new java.awt.Color(217, 81, 78));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel24.setText("Munka hozzáadása");
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel25.setText("Kategória:");
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel26.setText("Kijelölt személy:");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel27.setText("A feladat leírása:");
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jButton2.setBackground(new java.awt.Color(217, 81, 78));
+        jButton2.setText("Feladat kiadása");
+
+        javax.swing.GroupLayout munkaLayout = new javax.swing.GroupLayout(munka);
+        munka.setLayout(munkaLayout);
+        munkaLayout.setHorizontalGroup(
+            munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(munkaLayout.createSequentialGroup()
+                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(munkaLayout.createSequentialGroup()
+                        .addGap(476, 476, 476)
+                        .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(munkaLayout.createSequentialGroup()
+                        .addGap(506, 506, 506)
+                        .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, munkaLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel26)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, munkaLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel23))
+                                .addGap(134, 134, 134)
+                                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(munkaLayout.createSequentialGroup()
+                        .addGap(640, 640, 640)
+                        .addComponent(jLabel27))
+                    .addGroup(munkaLayout.createSequentialGroup()
+                        .addGap(545, 545, 545)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(517, Short.MAX_VALUE))
+            .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(munkaLayout.createSequentialGroup()
+                    .addGap(659, 659, 659)
+                    .addComponent(jLabel24)
+                    .addContainerGap(683, Short.MAX_VALUE)))
+        );
+        munkaLayout.setVerticalGroup(
+            munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(munkaLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23))
+                .addGap(67, 67, 67)
+                .addComponent(jLabel27)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(jButton2)
+                .addContainerGap(170, Short.MAX_VALUE))
+            .addGroup(munkaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(munkaLayout.createSequentialGroup()
+                    .addGap(39, 39, 39)
+                    .addComponent(jLabel24)
+                    .addContainerGap(756, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
@@ -518,6 +677,11 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerLayout.createSequentialGroup()
                     .addComponent(ujTag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(containerLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(munka, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         containerLayout.setVerticalGroup(
             containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,6 +699,11 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(containerLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ujTag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(containerLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(munka, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -575,6 +744,11 @@ public class mainFrame extends javax.swing.JFrame {
         setAllInvisible();
         kerelmek.setVisible(true);
     }//GEN-LAST:event_kerelmekLabelMouseClicked
+
+    private void munkaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_munkaLabelMouseClicked
+        setAllInvisible();
+        munka.setVisible(true);
+    }//GEN-LAST:event_munkaLabelMouseClicked
 
     private void ujTagLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ujTagLabelMouseClicked
         setAllInvisible();
@@ -621,6 +795,7 @@ public class mainFrame extends javax.swing.JFrame {
         kerelmek.setVisible(false);
         szabadsag.setVisible(false);
         ujTag.setVisible(false);
+        munka.setVisible(false);
         
         
     }
@@ -633,6 +808,9 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel felveheto;
     private javax.swing.JLabel felvehetoLabel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -646,11 +824,20 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -660,6 +847,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -667,8 +855,12 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel kerelmek;
     private javax.swing.JLabel kerelmekLabel;
+    private javax.swing.JPanel munka;
+    private javax.swing.JLabel munkaLabel;
     private javax.swing.JPanel szabadsag;
     private javax.swing.JLabel szabadsagLabel;
     private javax.swing.JPanel ujTag;
