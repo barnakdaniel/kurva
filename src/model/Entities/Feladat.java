@@ -12,23 +12,29 @@ package model.Entities;
 public class Feladat {
     private int id;
     private String feladatnév;
-    private int kiadata;
+    private int kiadta;
     private int megkapta;
     private int kategoria;
     private String leiras;
 
-    public Feladat(int id, String feladatnév, int kiadata, int megkapta, int kategoria, String leiras) {
-        this.id = id;
+    public Feladat(String feladatnév, int kiadta, int kategoria, String leiras) {
         this.feladatnév = feladatnév;
-        this.kiadata = kiadata;
-        this.megkapta = megkapta;
+        this.kiadta = kiadta;
         this.kategoria = kategoria;
         this.leiras = leiras;
     }
 
-  
     
     
+    public Feladat(int id, String feladatnév, int kiadata, int megkapta, int kategoria, String leiras) {
+        this.id = id;
+        this.feladatnév = feladatnév;
+        this.kiadta = kiadta;
+        this.megkapta = megkapta;
+        this.kategoria = kategoria;
+        this.leiras = leiras;
+    }
+   
     public int getId() {
         return id;
     }
@@ -47,12 +53,12 @@ public class Feladat {
 
     
     
-    public int getKiadata() {
-        return kiadata;
+    public int getKiadta() {
+        return kiadta;
     }
 
-    public void setKiadata(int kiadata) {
-        this.kiadata = kiadata;
+    public void getKiadta(int kiadta) {
+        this.kiadta = kiadta;
     }
 
     public int getMegkapta() {

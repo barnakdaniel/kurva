@@ -4,18 +4,41 @@
  * and open the template in the editor.
  */
 package model.service;
+import java.util.List;
 import model.Entities.Dolgozo;
 import model.Entities.Feladat;
 import model.Entities.Kategoria;
+import model.Query;
 
 public class FeladatService {
+    private Query query;
     
-    public void feladatHozzadasa(Dolgozo dolgozo, String nev, String leiras){
-        if(dolgozo.getBeosztas() < 2) return;
+     public FeladatService() {
+        this.query = new Query();
+    }
+    public List<Feladat> egyDolgozFeladati(Dolgozo dolgozo){
         
+        return query.feladatokEgyDolgozohoz(dolgozo);
+    }
+    
+    public List<Feladat> osszesFeladat(Dolgozo dolgozo){
+       // if(dolgozo.getBeosztas() < 2) return null;
         
-        
-        
+        return query.feladatok();
+    }
+    
+    public void feladatHozzadasa(Dolgozo kiadata, Dolgozo megkapta, String nev, String leiras, Kategoria kategoria){
+        if(kiadata.getBeosztas() < 2) return;
+        query.feladatHozzadasa(nev, leiras, kiadata, megkapta, kategoria);
+        List<Feladat> asd = this.osszesFeladat(kiadata);
+        List<Feladat> asdd = this.egyDolgozFeladati(megkapta);
+//        for (int i = 0; i < asd.size(); i++) {
+//            System.out.println(asd.get(i).getFeladatnév());
+//        }
+       for (int i = 0; i < asdd.size(); i++) {
+            System.out.println(asdd.get(i).getFeladatnév());
+        }
+
         
     }
     
