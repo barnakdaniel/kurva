@@ -19,15 +19,16 @@ public class Database {
     private final String PASSWORD;
 
     public Database() {
-        this.HOST = "jdbc:mysql://localhost:3306/";
-        this.DBNAME = "zd?useUnicode=true&characterEncoding=UTF-8";
-        this.DRIVER = "com.mysql.jdbc.Driver";
-        this.USERNAME = "root";
+        
+        this.USERNAME = "";
         this.PASSWORD = "";
+        this.DBNAME = "";
+        this.HOST = "jdbc:derby:sampleDB;create=true";
+        this.DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
     }
 
     public Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName(DRIVER); // A JDBC driver regisztrációja
-        return DriverManager.getConnection(HOST + DBNAME, USERNAME, PASSWORD); // Kapcsolat megnyitása;
+        return DriverManager.getConnection(HOST); // Kapcsolat megnyitása;
     }
 }

@@ -9,15 +9,40 @@ package model.Entities;
  *
  * @author danie
  */
-public class User {
+public class Dolgozo {
     private int id;
     private String nev;
+    private String email;
     private String jelszo;
     private int beosztas;
-    private int varosId;
+    private String varos;
     private int fizetes;
     private int szabadsag;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+     public int getId() {
+        return id;
+    }
+
+    public String getJelszo() {
+        return jelszo;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setJelszo(String jelszo) {
+        this.jelszo = jelszo;
+    }
+    
     public String getNev() {
         return nev;
     }
@@ -34,12 +59,12 @@ public class User {
         this.beosztas = beosztas;
     }
 
-    public int getVarosId() {
-        return varosId;
+    public String getVarosId() {
+        return varos;
     }
 
-    public void setVarosId(int varosId) {
-        this.varosId = varosId;
+    public void setVarosId(String varos) {
+        this.varos = varos;
     }
 
     public int getFizetes() {
@@ -58,15 +83,16 @@ public class User {
         this.szabadsag = szabadsag;
     }
 
-    public User() {
+    public Dolgozo() {
     }
 
-    public User(int id,String nev, String jelszo,int beosztas, int varosId, int fizetes, int szabadsag) {
+    public Dolgozo(int id, String nev,  String email, String jelszo, int beosztas, String varos, int fizetes, int szabadsag) {
         this.id= id;
         this.nev = nev;
+        this.email = email;
         this.jelszo = jelszo;
         this.beosztas = beosztas;
-        this.varosId = varosId;
+        this.varos = varos;
         this.fizetes = fizetes;
         this.szabadsag = szabadsag;
     }

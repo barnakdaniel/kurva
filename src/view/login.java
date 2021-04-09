@@ -6,6 +6,7 @@
 package view;
 
 import model.Query;
+import model.service.Auth;
 
 /**
  *
@@ -13,10 +14,12 @@ import model.Query;
  */
 public class login extends javax.swing.JFrame {
     Query q = new Query();
+    Auth auth = new Auth(); 
     /**
      * Creates new form login
      */
     public login() {
+        
         initComponents();
         this.setSize(800,500);
         this.setResizable(false);
@@ -38,7 +41,7 @@ public class login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        userField = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
@@ -101,14 +104,14 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        userField.setBackground(new java.awt.Color(42, 43, 45));
-        userField.setForeground(new java.awt.Color(217, 81, 78));
-        userField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        userField.setText("Felhasználónév");
-        userField.setBorder(null);
-        userField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userFieldActionPerformed(evt);
+        email.setBackground(new java.awt.Color(42, 43, 45));
+        email.setForeground(new java.awt.Color(217, 81, 78));
+        email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        email.setText("youremail@example.com");
+        email.setBorder(null);
+        email.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                emailMouseClicked(evt);
             }
         });
 
@@ -117,9 +120,9 @@ public class login extends javax.swing.JFrame {
         passwordField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         passwordField.setText("kelszó");
         passwordField.setBorder(null);
-        passwordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFieldActionPerformed(evt);
+        passwordField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passwordFieldMouseClicked(evt);
             }
         });
 
@@ -149,7 +152,7 @@ public class login extends javax.swing.JFrame {
                 .addComponent(userLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(userField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1)
                     .addComponent(jSeparator2)
@@ -158,12 +161,12 @@ public class login extends javax.swing.JFrame {
         );
         backgroundPanelLayout.setVerticalGroup(
             backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(leftPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(leftPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
             .addGroup(backgroundPanelLayout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundPanelLayout.createSequentialGroup()
-                        .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(userLabel))
@@ -190,17 +193,20 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFieldActionPerformed
-
-    private void userFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userFieldActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        q.loginUser("asdas", "dhsadhsau");
+//      q.loginUser("asd", "asd");
+       // 
+       // q.loginUser(email.getText(), passwordField.getText());
+       auth.register(email.getText(), passwordField.getText(), "asasda sd", 1, 1, 1, 1);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
+        email.setText("");
+    }//GEN-LAST:event_emailMouseClicked
+
+    private void passwordFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordFieldMouseClicked
+        passwordField.setText("");
+    }//GEN-LAST:event_passwordFieldMouseClicked
 
     /**
      * @param args the command line arguments
@@ -239,6 +245,7 @@ public class login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backgroundPanel;
+    private javax.swing.JTextField email;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -249,7 +256,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel leftPanel;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JTextField userField;
     private javax.swing.JLabel userLabel;
     // End of variables declaration//GEN-END:variables
 }
