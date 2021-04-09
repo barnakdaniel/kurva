@@ -49,13 +49,36 @@ public class mainFrame extends javax.swing.JFrame {
         felveheto = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         szabadsag = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jSeparator9 = new javax.swing.JSeparator();
+        jLabel19 = new javax.swing.JLabel();
         kerelmek = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         ujTag = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jSeparator7 = new javax.swing.JSeparator();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -234,24 +257,105 @@ public class mainFrame extends javax.swing.JFrame {
         szabadsag.setBackground(new java.awt.Color(42, 43, 45));
         szabadsag.setPreferredSize(new java.awt.Dimension(1298, 720));
 
-        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel8.setText("Szabadsag");
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel17.setText("Szabadság kérelem");
+
+        jSeparator8.setBackground(new java.awt.Color(217, 81, 78));
+        jSeparator8.setForeground(new java.awt.Color(217, 81, 78));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel18.setText("Önnek jelenleg ennyi szabadsága van: ");
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel20.setText("A szabadság végének dátuma:");
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel21.setText("A szabadság kezdésének dátuma:");
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel22.setText("A szabadság indoklása:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jSeparator9.setBackground(new java.awt.Color(217, 81, 78));
+        jSeparator9.setForeground(new java.awt.Color(217, 81, 78));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel19.setText("A kérelem elbírálásáról email-ben értesítünk");
 
         javax.swing.GroupLayout szabadsagLayout = new javax.swing.GroupLayout(szabadsag);
         szabadsag.setLayout(szabadsagLayout);
         szabadsagLayout.setHorizontalGroup(
             szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(szabadsagLayout.createSequentialGroup()
-                .addGap(421, 421, 421)
-                .addComponent(jLabel8)
-                .addContainerGap(1027, Short.MAX_VALUE))
+                .addContainerGap(518, Short.MAX_VALUE)
+                .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(661, 661, 661))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                        .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(szabadsagLayout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addGap(77, 77, 77)))
+                        .addGap(485, 485, 485))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                        .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(65, 65, 65))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                                .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel21)
+                                    .addComponent(jLabel20))
+                                .addGap(38, 38, 38)
+                                .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                                .addComponent(jLabel22)
+                                .addGap(123, 123, 123)))
+                        .addGap(517, 517, 517))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, szabadsagLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(600, 600, 600))))
         );
         szabadsagLayout.setVerticalGroup(
             szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(szabadsagLayout.createSequentialGroup()
-                .addGap(202, 202, 202)
-                .addComponent(jLabel8)
-                .addContainerGap(504, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113)
+                .addComponent(jLabel18)
+                .addGap(88, 88, 88)
+                .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(szabadsagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(74, 74, 74)
+                .addComponent(jLabel22)
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel19)
+                .addGap(41, 41, 41))
         );
 
         kerelmek.setBackground(new java.awt.Color(42, 43, 45));
@@ -282,10 +386,38 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(217, 81, 78));
         jLabel10.setText("Ha fel szeretne venni egy új tagot a rendszerbe, adja meg az adatait! ");
 
-        jTextField1.setText("jTextField1");
-
         jSeparator6.setBackground(new java.awt.Color(217, 81, 78));
         jSeparator6.setForeground(new java.awt.Color(217, 81, 78));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel11.setText("Név :");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel12.setText("Beosztás :");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel13.setText("Fizetés :");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel14.setText("Város :");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel15.setText(" Jelszó :");
+
+        jButton1.setBackground(new java.awt.Color(217, 81, 78));
+        jButton1.setText("Tag felvétele");
+
+        jSeparator7.setBackground(new java.awt.Color(217, 81, 78));
+        jSeparator7.setForeground(new java.awt.Color(217, 81, 78));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(217, 81, 78));
+        jLabel16.setText("Az adatokat késõbb még modosíthatja");
 
         javax.swing.GroupLayout ujTagLayout = new javax.swing.GroupLayout(ujTag);
         ujTag.setLayout(ujTagLayout);
@@ -294,15 +426,40 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(ujTagLayout.createSequentialGroup()
                 .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ujTagLayout.createSequentialGroup()
-                        .addGap(729, 729, 729)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ujTagLayout.createSequentialGroup()
                         .addGap(454, 454, 454)
                         .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addGroup(ujTagLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(ujTagLayout.createSequentialGroup()
+                                .addGap(108, 108, 108)
+                                .addComponent(jLabel16))))
+                    .addGroup(ujTagLayout.createSequentialGroup()
+                        .addGap(550, 550, 550)
+                        .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ujTagLayout.createSequentialGroup()
+                                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ujTagLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel11))
+                                    .addComponent(jLabel12)
+                                    .addGroup(ujTagLayout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel13)
+                                            .addComponent(jLabel14)
+                                            .addComponent(jLabel15))))
+                                .addGap(76, 76, 76)
+                                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(495, Short.MAX_VALUE))
         );
         ujTagLayout.setVerticalGroup(
@@ -312,9 +469,33 @@ public class mainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(629, Short.MAX_VALUE))
+                .addGap(132, 132, 132)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(ujTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addGap(56, 56, 56))
         );
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
@@ -451,18 +632,41 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel elvallaltLabel;
     private javax.swing.JPanel felveheto;
     private javax.swing.JLabel felvehetoLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JPanel kerelmek;
     private javax.swing.JLabel kerelmekLabel;
     private javax.swing.JPanel szabadsag;
