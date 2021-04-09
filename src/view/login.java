@@ -5,8 +5,10 @@
  */
 package view;
 
+import model.Entities.Dolgozo;
+import model.Entities.Kategoria;
 import model.Query;
-import model.service.Auth;
+import model.service.*;
 
 /**
  *
@@ -15,6 +17,7 @@ import model.service.Auth;
 public class login extends javax.swing.JFrame {
     Query q = new Query();
     Auth auth = new Auth(); 
+    FeladatService fs = new FeladatService(); 
     /**
      * Creates new form login
      */
@@ -194,7 +197,10 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     //  auth.register(email.getText(), passwordField.getText(), "asasda sd", 1, 1, 1, 1);
+       // auth.register(email.getText(), passwordField.getText() + "", "asasda sd", "asd", 1, 1, 1);                
+        //auth.register(email.getText() +"a", passwordField.getText() + "", "asasda sd", "asd", 2, 2, 3);
+      
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked

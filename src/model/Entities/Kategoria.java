@@ -11,9 +11,9 @@ package model.Entities;
  */
 public class Kategoria {
     private int id;
-    private int kategoria;
+    private String kategoria;
 
-    public Kategoria(int id, int kategoria) {
+    public Kategoria(int id, String kategoria) {
         this.id = id;
         this.kategoria = kategoria;
     }
@@ -26,11 +26,11 @@ public class Kategoria {
         this.id = id;
     }
 
-    public int getKategoria() {
+    public String getKategoria() {
         return kategoria;
     }
 
-    public void setKategoria(int kategoria) {
+    public void setKategoria(String kategoria) {
         this.kategoria = kategoria;
     }
     

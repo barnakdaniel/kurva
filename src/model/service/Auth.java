@@ -21,9 +21,9 @@ public class Auth {
         return query.loginUser(email, jelszo);
     }
 
-    public void register(String email, String jelszo, String nev, int varosId, int beosztas, int fizetes, int szabadsag){
-        validation(email, jelszo, nev, varosId, beosztas, fizetes, szabadsag);
-       // query.addUser(nev, email,  jelszo, varosId, fizetes, szabadsag, beosztas);
+    public void register(String email, String jelszo, String nev, String varos, int beosztas, int fizetes, int szabadsag){
+      //  validation(email, jelszo, nev, varosId, beosztas, fizetes, szabadsag);
+        query.addUser(nev, email,  jelszo, varos, fizetes, szabadsag, beosztas);
     }
     
     private void validation(String email, String jelszo, String nev, int varosId, int beosztas, int fizetes, int szabadsag){
