@@ -27,15 +27,15 @@ public class Auth {
     }
     
     private void validation(String email, String jelszo, String nev, int varosId, int beosztas, int fizetes, int szabadsag){
-            if(email.length() < 5 || email.length() > 60) {
+            if(email.length() < 5 || email.length() > 100) {
                 System.err.println("Nem jó az email hossza");
                 return;
             }
-            if(jelszo.length() < 5 || jelszo.length() > 60) {
+            if(jelszo.length() < 5 || jelszo.length() > 50) {
                 System.err.println("Nem jó az jelszo hossza");
                 return;
             }
-            if(nev.length() < 5 || nev.length() > 60) {
+            if(nev.length() < 5 || nev.length() > 30) {
                 System.err.println("Nem jó az nev hossza");
                 return;
             }

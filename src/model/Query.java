@@ -44,7 +44,7 @@ public class Query {
             createStatement = conn.createStatement();
             ResultSet rs = dbmd.getTables(null, "APP", "DOLGOZO", null);
             if (!rs.next()) {
-                createStatement.execute("CREATE TABLE dolgozo (id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, nev varchar(30) NOT NULL, email varchar(100) UNIQUE NOT NULL, beosztas int NOT NULL, varosid int NOT NULL, fizetes int NOT NULL, szabadsag int NOT NULL, jelszo varchar(50)  NOT NULL )");
+                createStatement.execute("CREATE TABLE dolgozo (id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, nev varchar(30) NOT NULL, email varchar(100) UNIQUE NOT NULL, beosztas int NOT NULL, varos varchar(50) NOT NULL, fizetes int NOT NULL, szabadsag int NOT NULL, jelszo varchar(50)  NOT NULL )");
             }
 
         } catch (SQLException ex) {
@@ -56,14 +56,14 @@ public class Query {
 
     public void addUser(String nev, String email, String jelszo, String varos, int fizetes, int szabadsag, int beosztas) {
         try {
-            String sql = "insert into dolgozo(nev, email, beosztas, varosId, fizetes, szabadsag, jelszo) values (?,?,?,?,?,?,?)";
+            String sql = "insert into dolgozo(nev, email, beosztas, varos, fizetes, szabadsag, jelszo) values (?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, nev);
             preparedStatement.setString(2, email);
             preparedStatement.setInt(3, beosztas);
             preparedStatement.setString(4, varos);
-            preparedStatement.setInt(5, 1);
-            preparedStatement.setInt(6, 1);
+            preparedStatement.setInt(5, fizetes);
+            preparedStatement.setInt(6, szabadsag);
             preparedStatement.setString(7, jelszo);
             preparedStatement.execute();
         } catch (SQLException ex) {

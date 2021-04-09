@@ -194,10 +194,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//      q.loginUser("asd", "asd");
-       // 
-       // q.loginUser(email.getText(), passwordField.getText());
-       auth.register(email.getText(), passwordField.getText(), "asasda sd", 1, 1, 1, 1);
+     //  auth.register(email.getText(), passwordField.getText(), "asasda sd", 1, 1, 1, 1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
