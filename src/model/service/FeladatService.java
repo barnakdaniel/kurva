@@ -22,24 +22,20 @@ public class FeladatService {
     }
     
     public List<Feladat> osszesFeladat(Dolgozo dolgozo){
-       // if(dolgozo.getBeosztas() < 2) return null;
+        if(dolgozo.getBeosztas() < 2) return null;
         
         return query.feladatok();
     }
     
-    public void feladatHozzadasa(Dolgozo kiadata, Dolgozo megkapta, String nev, String leiras, Kategoria kategoria){
-        if(kiadata.getBeosztas() < 2) return;
-        query.feladatHozzadasa(nev, leiras, kiadata, megkapta, kategoria);
-        List<Feladat> asd = this.osszesFeladat(kiadata);
-        List<Feladat> asdd = this.egyDolgozFeladati(megkapta);
-//        for (int i = 0; i < asd.size(); i++) {
-//            System.out.println(asd.get(i).getFeladatnév());
-//        }
-       for (int i = 0; i < asdd.size(); i++) {
-            System.out.println(asdd.get(i).getFeladatnév());
-        }
-
+    public void feladatHozzadasa(Dolgozo kiadta, Dolgozo megkapta, String nev, String leiras, Kategoria kategoria){
+        if(kiadta.getBeosztas() < 2) return;
         
+        try {
+            query.feladatHozzadasa(nev, leiras, kiadta, megkapta, kategoria);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+      
     }
     
     

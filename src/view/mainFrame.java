@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package view;
-
+import model.Entities.Dolgozo;
 
 /**
  *
@@ -12,11 +12,19 @@ package view;
  */
 public class mainFrame extends javax.swing.JFrame {
     
-
+    Dolgozo bejelntkezett;
     /**
      * Creates new form mainFrame
      */
+    
     public mainFrame() {
+        initComponents();
+        setAllInvisible();
+        elvallalt.setVisible(true);
+        
+    }
+    public mainFrame(Dolgozo bejelentkezett) {
+        this.bejelntkezett = bejelentkezett;
         initComponents();
         setAllInvisible();
         elvallalt.setVisible(true);

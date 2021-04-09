@@ -98,7 +98,6 @@ public class Query {
                         rs.getString("varos"), rs.getInt("fizetes"), rs.getInt("szabadsag"));
             }
         } catch (SQLException ex) {
-            System.out.println("Valami baj a bejelntekzéssel");
             System.out.println("" + ex);
         }
         return dolgozo;
@@ -133,7 +132,6 @@ public class Query {
             preparedStatement.setString(1, kategoria);
             preparedStatement.execute();
         } catch (SQLException ex) {
-            System.out.println("Valami baj van a user hozzáadásakor");
             System.out.println("" + ex);
         }
     }
@@ -153,7 +151,6 @@ public class Query {
             pst.setInt(5, kategoria.getId());
             pst.execute();
         } catch (SQLException ex) {
-            System.out.println("Valami baj van a feladat hozzáadásakor");
             System.out.println("" + ex);
         }
     }

@@ -271,7 +271,7 @@
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="szabadsag" pref="1500" max="32767" attributes="0"/>
+                      <Component id="szabadsag" pref="1516" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
@@ -303,7 +303,7 @@
                   <Component id="felveheto" alignment="0" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                  <Component id="szabadsag" alignment="1" pref="839" max="32767" attributes="0"/>
+                  <Component id="szabadsag" alignment="1" pref="849" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
